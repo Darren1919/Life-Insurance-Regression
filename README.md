@@ -1,31 +1,26 @@
-# 🚀 Life Insurance Regression (FYP)
+# 🏦 Life Insurance Claim Prediction  
 
-This project applies **Robust Ridge Regression techniques** to predict life insurance claims.  
-We compare **OLS, Ridge, WRM, and WRMM models** and evaluate their performance using RMSE, MAE, and R².
+This project applies **Gradient Boosting Regression** to predict **insurance claim amounts**, helping insurers assess risk and improve claim management.  
 
-## 📊 Dataset Information
-- **Source:** Synthetic dataset for insurance claims analysis
-- **Rows:** 1,000
-- **Columns:** 25
-- **Target Variable:** `total_claim_amount`
+## 📂 Dataset  
+The dataset contains various policyholder details and claim-related information. The target variable is `total_claim_amount`, and key features include `injury_claim`, `property_claim`, `months_as_customer`, `incident_severity`, `policy_annual_premium`, and more.  
 
-## 🚀 How to Run (with Dataset)
+## 📊 Model Performance  
+The trained **Gradient Boosting Regressor** achieved:  
+✅ **R² Score:** 0.9567 (indicating a strong fit)  
+✅ **MAE:** 3922.47  
+✅ **MSE:** 29,283,235  
+✅ **RMSE:** 5411.40  
+
+### 🔥 Feature Importance  
+Below is a visualization of the most important features affecting claim amounts:  
+
+![Feature Importance](download.png)  
+
+## ⚡ How to Run  
+Clone the repository, install dependencies, and run the script using the commands below:  
 ```bash
-# Install dependencies
+git clone https://github.com/Darren1919/Life-Insurance-Regression.git
+cd Life-Insurance-Regression
 pip install -r requirements.txt
-
-# Run preprocessing
-python src/data_preprocessing.py
-
-# Train model using dataset
-python src/train_model.py
-
-
-## 📊 Visualizations
-Here are some key results from the analysis:
-
-### Actual vs Predicted Claims
-![Actual vs Predicted](results/actual_vs_predicted.png)
-
-### Feature Importance
-![Feature Importance](results/feature_importance.png)
+python life_insurance_regression.py
